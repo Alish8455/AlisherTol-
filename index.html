@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronaldo Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "ronaldo" && password === "GOAT7") {
+                window.location.href = "personal.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Ronaldo's Fan Page</h1>
+        <form onsubmit="return validateLogin();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
